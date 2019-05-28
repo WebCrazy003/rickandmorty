@@ -1,2 +1,2 @@
 import "./character/index.sass";
-import "./characters/index.sass";
+import "./characterList/index.sass";

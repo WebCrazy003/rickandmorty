@@ -1,6 +1,11 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
-import { Character, Characters } from "./container";
+import {
+  BrowserRouter as Router,
+  Route,
+  Redirect,
+  Switch
+} from "react-router-dom";
+import { Character, CharacterList } from "./container";
 import createSagaMiddleware from "redux-saga";
 import { createStore, applyMiddleware } from "redux";
 import { Provider } from "react-redux";
@@ -16,9 +21,11 @@ class App extends React.Component {
     return (
       <Provider store={store}>
         <Router>
-          <Route path="/characters" exact component={Characters} />
-          <Route path="/characters/:id" exact component={Character} />
-          {/* <Route render={() => <Redirect to={{ home: "/characters" }} />} /> */}
+          <Switch>
+            <Route path="/characters" exact={true} component={CharacterList} />
+            <Route path="/characters/:id" exact={true} component={Character} />
+            <Route render={() => <Redirect to="/characters" />} />
+          </Switch>
         </Router>
       </Provider>
     );

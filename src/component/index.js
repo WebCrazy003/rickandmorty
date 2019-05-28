@@ -1,4 +1,4 @@
 import Character from "./character";
-import Characters from "./characters";
+import CharacterList from "./characterList";
 
-export { Character, Characters };
+export { Character, CharacterList };

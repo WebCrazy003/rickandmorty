@@ -8,7 +8,7 @@ export default class Character extends React.Component {
     if (loading)
       return (
         <div>
-          <img src="./image/loading_spinner.gif" alt="loading spinner" />
+          <img src="/image/loading_spinner.gif" alt="loading spinner" />
         </div>
       );
     else
@@ -25,7 +25,7 @@ export default class Character extends React.Component {
       );
   }
 
-  componentWillMount() {
+  componentDidMount() {
     const {
       onLoad,
       match: {

@@ -1,9 +1,9 @@
-const getCharacters = () => ({
-  type: "GET_CHARACTERS"
+const getCharacterList = () => ({
+  type: "GET_CHARACTER_LIST"
 });
 
-const charactersReceived = characters => ({
-  type: "CHARACTERS_RECEIVED",
+const characterListReceived = characters => ({
+  type: "CHARACTER_LIST_RECEIVED",
   characters
 });
 
@@ -17,4 +17,9 @@ const characterReceived = character => ({
   character
 });
 
-export { getCharacters, charactersReceived, getCharacter, characterReceived };
+export {
+  getCharacterList,
+  characterListReceived,
+  getCharacter,
+  characterReceived
+};

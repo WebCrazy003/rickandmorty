@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
-import { Characters } from "../../component";
-import { getCharacters } from "../../action";
+import { CharacterList } from "../../component";
+import { getCharacterList } from "../../action";
 
 const mapStateToProps = state => {
   return {
@@ -10,10 +10,10 @@ const mapStateToProps = state => {
 };
 
 const mapStateToDispatch = dispatch => ({
-  onLoad: () => dispatch(getCharacters())
+  onLoad: () => dispatch(getCharacterList())
 });
 
 export default connect(
   mapStateToProps,
   mapStateToDispatch
-)(Characters);
+)(CharacterList);
